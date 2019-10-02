@@ -10,7 +10,7 @@
             } else {
                 var output_str = element.text
             };
-        return `<li><div>${output_str}</div></li>`;
+        return `<li><div><a href='#notes/${element.id}'>${output_str}</a></div></li>`;
         });
         const newerArray = newArray.join('');
         return "<ul>" + newerArray + "</ul>";
