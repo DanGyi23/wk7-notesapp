@@ -24,8 +24,8 @@ function testEachNoteHasUniqueID() {
   var noteList = new NoteList();
   noteList.addNote("Hello!");
   noteList.addNote("There!");
-  assert.isTrue(noteList.list[0].id === 0);
-  assert.isTrue(noteList.list[1].id === 1);
+  assert.isTrue(noteList.list[0].id == 0);
+  assert.isTrue(noteList.list[1].id == 1);
   console.log("testEachNoteHasUniqueID passed")
 };
 
