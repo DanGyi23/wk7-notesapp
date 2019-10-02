@@ -11,7 +11,6 @@
     element = document.getElementById('app')
     element.innerHTML = new_html
 
-    // make list of notes available within eventlistener ??
     var listofnotes = this._notelist
     window.addEventListener("hashchange", function (event) {
       event.preventDefault();

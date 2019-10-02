@@ -10,11 +10,6 @@ function testInnerHTMLProperty() {
   console.log("testInnerHTMLProperty passed")
 };
 
-function testNoteControllerHashChange() {
-
-
-}
-
 testNoteControllerInstantiation();
 testInnerHTMLProperty();
 testNoteControllerHashChange();
