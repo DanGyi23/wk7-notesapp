@@ -4,9 +4,10 @@
     this._notelist = notelist;
     this._notelistview = new NoteListView(this._notelist);
 
-    new_html = this._notelistview.returnListView();
-    element = document.getElementById('app')
-    element.innerHTML = new_html
+      var new_html = this._notelistview.returnListView();
+      var element = document.getElementById('app')
+      element.innerHTML = new_html
+
 
     window.addEventListener("hashchange", function (event) {
       event.preventDefault();
@@ -18,10 +19,14 @@
     });
 
     note_entry_form = document.getElementById('text-input')
+    notelistview = this._notelistview
     note_entry_form.addEventListener("submit", function (event) {
       event.preventDefault();
       var text_entered = document.getElementById('note-entry').value;
       notelist.addNote(text_entered);
+      var new_html = notelistview.returnListView();
+      var element = document.getElementById('app')
+      element.innerHTML = new_html
     })
 
   }
