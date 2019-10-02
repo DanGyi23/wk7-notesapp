@@ -4,6 +4,9 @@
     this._notelist = new NoteList;
     this._notelistview = new NoteListView(this._notelist);
 
+    this._notelist.addNote("Zip Zop");
+    this._notelist.addNote("Wowcher'1241$$$!@$%");
+
     new_html = this._notelistview.returnListView();
     element = document.getElementById('app')
     element.innerHTML = new_html
