@@ -17,6 +17,13 @@
       document.getElementById('note-text').innerHTML = noteobject.text
     });
 
+    note_entry_form = document.getElementById('text-input')
+    note_entry_form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var text_entered = document.getElementById('note-entry').value;
+      notelist.addNote(text_entered);
+    })
+
   }
 
   exports.noteController = noteController;

@@ -11,10 +11,19 @@
 
 <div id='app'></div>
 
-<br style='line-height:8'>
+<br style='line-height:4'>
 <h2>Your Amazing Note:</h2>
 <div id='note-text'></div>
+<br style='line-height:4'>
 
+<form id='text-input' action='/#addnewnote' method='POST'>
+  <textarea  id='note-entry' cols='40' rows='5' required='true'>
+    
+  </textarea>
+  <br style='line-height:2'>
+  <input type='submit' value="Add Note">
+
+</form>
 </html>
 
 <script src='../controller/note-controller.js'></script>
