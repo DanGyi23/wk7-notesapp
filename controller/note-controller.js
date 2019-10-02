@@ -1,16 +1,13 @@
 (function(exports) {
 
-  function changeAppHTML(text) {
-    var notelist = new NoteList;
-    notelist.addNote(text);
-    var notelistview = new NoteListView(notelist);
+  function noteController() {
+    this._notelist = new NoteList;
+    this._notelistview = new NoteListView(this._notelist);
 
-    new_html = notelistview.returnListView();
+    new_html = this._notelistview.returnListView();
     element = document.getElementById('app')
     element.innerHTML = new_html
   }
  
-  exports.changeAppHTML = changeAppHTML;
+  exports.noteController = noteController;
 })(this);
-
-changeAppHTML("Favourite Drink: seltzer");
